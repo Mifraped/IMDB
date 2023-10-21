@@ -10,6 +10,12 @@ let arr:Movie[] = [movie1, movie2, movie3];
 
 let imdb:Imdb = new Imdb(arr);
 
-let stringiImdb = JSON.stringify(imdb)
+// let stringiImdb = JSON.stringify(imdb)
+// fs.writeFileSync("imbdBBDD.json", stringiImdb)
 
-fs.writeFileSync("imbdBBDD.json", stringiImdb)
+// let objBuff = fs.readFileSync("./imbdBBDD.json")
+// let strObjBuff = objBuff.toString()
+// let imdb2 = JSON.parse(strObjBuff)
+
+imdb.escribirEnFicheroJSON("imdbBBDD.json")
+console.log(imdb.obtenerInstanciaIMDB("imdbBBDD.json"));
